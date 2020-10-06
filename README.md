@@ -79,7 +79,19 @@ Then click to save:
 
 ![saverunbook](images/saverunbook.png)
 
-## SSH Module
+## PowerShell SSH Module
+
+Now, the next step is to add the SSH Module to Stop-Nginx runbook. Go to Automation Account menu, then **Shared Resources** > **Modules**. Then click at **Browse Gallery** and type **SSH**:
+
+![sshmodule](images/sshmodule.png)
+
+Now click to import this PowerShell SSH Module:
+
+![powershellsshmodule](images/powershellsshmodule.png)
+
+Click to **OK** so in a few moments the PowerShell SSH Module will be available:
+
+![sshmoduleavailable](images/sshmoduleavailable.png)
 
 
 
