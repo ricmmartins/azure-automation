@@ -24,11 +24,12 @@ Click to import:
 
 ![import](images/import.png)
 
-Now let's start with some changes. I'll change the name in order to be more acurated with the function desired. I'lll rename the name to **Stop-Nginx** and create an appropriated **description**:
+Now let's start with some changes. I'll change the name in order to be more acurated with the function desired. I'll rename the name to **Stop-Nginx** and create an appropriated **description**:
 
 ![stopnginx](images/stopnginx.png)
 
 Finishing the importing:
+
 ![importfinished](images/importfinished.png)
 
 Now we have a new runbook available:
