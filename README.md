@@ -20,7 +20,15 @@ Then search by **Run SSH**:
 
 ![runssh](images/runssh.png)
 
-Click to import
+Click to import:
 
 ![import](images/import.png)
+
+Now let's start with some changes. I'll change the name in order to be more acurated with the function desired. I'lll rename the name to **Stop-Nginx** and create an appropriated description:
+
+![stopnginx](images/stopnginx.png)
+
+Finishing the importing:
+
+![importfinished](images/importfinished.png)
 
