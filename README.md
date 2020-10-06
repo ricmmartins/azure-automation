@@ -107,6 +107,51 @@ Now we need to create a rule to allow the VM be accessed through SSH using the p
 
 ![nsg](images/nsg.png)
 
+## Publishing and scheduling the runbook exection
+
+Now let's publish the runbook so we will be able to set their schedule. Go to the **Automation Account > Process Automation > Runbooks**. Then select the runbook called **Stop-Nginx** then click to edit:
+
+![edittopublish](images/edittopublish.png)
+
+Then click to **Publish**:
+
+![publish](images/publish.png)
+
+Now let's set the schedule. Click at **Link to schedule**:
+
+![linktoschedule](images/linktoschedule.png)
+
+And in the next screen we'll have something like this:
+
+![schedulerunbook](images/schedulerunbook.png)
+
+So click at **Create a new schedule**:
+
+![createschedule](images/createschedule.png)
+
+And you must define the schedule details and then click to **Create**:
+
+![scheduledetails](images/scheduledetails.png)
+
+For the next step, we will define the runbook parameters and the execution settings. By default will be running the default command already present at the runbook, so  you can leave the **COMMAND** field in blank. At the field **CONNECTIONNAME** you must type the name of the connection created earlier with the VM Name, SSH port to be used, username and password.
+
+![parameters](images/parameters.png)
+
+## Finishing
+
+Now you can execute the runbook manually to validate the execution, or, wait until the runbook be executed at the schedule.
+
+![validate1](images/validate1.png)
+
+![validate2](images/validate2.png)
+
+## Disclaimer
+
+This sample was created based on the following SSH module for PowerShell:
+[https://gallery.technet.microsoft.com/scriptcenter/SSH-PowerShell-Module-17616e1a](https://gallery.technet.microsoft.com/scriptcenter/SSH-PowerShell-Module-17616e1a)
+
+
+
 
 
 
