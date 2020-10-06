@@ -1,6 +1,6 @@
 # How to use the Azure Automation to run scripts inside a Linux Virtual Machine
 
-The purpose of this document is to provide instructions on how to use the Azure Automation to execute scripts inside Linux Virtual Machines. In this lab scenario, the Linux VM will be runing on Azure and the connection from the Azure Automation to the VM will be done through the public IP of the VM.
+The purpose of this document is to provide instructions on how to use the Azure Automation to execute scripts inside Linux Virtual Machines. In this lab scenario, the Linux VM will be runing on Azure and the connection from the Azure Automation to the VM will be done through the public IP of the VM. The script to be executed will be a simple command to stop the Nginx service.
 
 
 ## Automation Account
@@ -24,7 +24,7 @@ Click to import:
 
 ![import](images/import.png)
 
-Now let's start with some changes. I'll change the name in order to be more acurated with the function desired. I'll rename the name to **Stop-Nginx** and create an appropriated **description**:
+Now let's start with some changes. I'll change the name in order to be more acurated with the function desired (command or script to be executed). I'll rename the name to **Stop-Nginx** and create an appropriated **description**:
 
 ![stopnginx](images/stopnginx.png)
 
@@ -92,6 +92,23 @@ Now click to import this PowerShell SSH Module:
 Click to **OK** so in a few moments the PowerShell SSH Module will be available:
 
 ![sshmoduleavailable](images/sshmoduleavailable.png)
+
+Now we need to create the SSH connection for the Automation Account. So on the Automation Account menu, under **Shared Resources** go to **Connections** then click to **+ Add a connection**, set a name and choose **SSH*:
+
+![sshconnection](images/sshconnection.png)
+
+Now you have to set the connection parameters and click to **Create**
+
+![sshconnectionparameters](images/sshconnectionparameters.png)
+
+## Network Security Group
+
+Now we need to create a rule to allow the VM be accessed through SSH using the port 22 from the Azure Cloud, in this case, from the Azure Automation running on Azure. To do this, you can go to the Network Security Group attached to the VM network interface or VM subnet then create a rule as below:
+
+![nsg](images/nsg.png)
+
+
+
 
 
 
