@@ -107,7 +107,7 @@ Now we need to create a rule to allow the VM be accessed through SSH using the p
 
 ![nsg](images/nsg.png)
 
-## Publishing and scheduling the runbook exection
+## Publishing and scheduling the runbook execution
 
 Now let's publish the runbook so we will be able to set their schedule. Go to the **Automation Account > Process Automation > Runbooks**. Then select the runbook called **Stop-Nginx** then click to edit:
 
