@@ -12,6 +12,15 @@ First of all, you need to have an Automation Account. In order to have this, fol
 
 ## Runbook
 
-Now you have your automation account created, go to **Process Automation** > **Runbooks** > **Browse gallery** and lets import a Runbook.
+Now you have your automation account created, go to **Process Automation** > **Runbooks** > **Browse gallery** and lets import a Runbook:
 
 ![runbooks](images/runbooks.png)
+
+Then search by **Run SSH**:
+
+![runssh](images/runssh.png)
+
+Click to import
+
+![import](images/import.png)
+
