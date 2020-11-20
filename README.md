@@ -145,6 +145,47 @@ Now you can execute the runbook manually to validate the execution, or, wait unt
 
 ![validate2](images/validate2.png)
 
+## Update
+
+There are some Linux distributions where in the /etc/ssh/sshd_config is missing the KexAlgorithms to describe which methods are supported by the SSH daemon. On those scenarios, when trying to execute the runbook, the execution can fail presenting some message litke this:
+
+```
+Exception calling "Connect" with "0" argument(s): "An established connection was aborted by the software in your host 
+machine."
+At C:\Modules\User\SSH\SSH.psm1:68 char:5
++     $SSHConnection.Connect()
++     ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : SshConnectionException
+ 
+Exception calling "RunCommand" with "1" argument(s): "Client not connected."
+At C:\Modules\User\SSH\SSH.psm1:69 char:5
++     $ResultObject = $SSHConnection.RunCommand($ScriptBlock.ToString() ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : SshConnectionException
+```
+
+You can check alson on the /var/log/messages of the VM some kind of mesage like this
+
+```
+ssh_dispatch_run_fatal: Connection from XXX.XXX.XXX.XXX port XXX: DH GEX group out of range [preauth]
+```
+
+To solve, you need to 
+
+1. Add the following at the end of /etc/ssh/sshd_config:
+
+```
+KexAlgorithms=diffie-hellman-group14-sha1
+```
+
+2. Restart the SSHD:
+
+```
+sudo systemctl restart sshd
+```
+
 ## Disclaimer
 
 This sample was created based on the following SSH module for PowerShell:
