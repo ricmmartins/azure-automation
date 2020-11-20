@@ -147,7 +147,7 @@ Now you can execute the runbook manually to validate the execution, or, wait unt
 
 ## Update
 
-There are some Linux distributions where in the /etc/ssh/sshd_config is missing the KexAlgorithms to describe which methods are supported by the SSH daemon. On those scenarios, when trying to execute the runbook, the execution can fail presenting some message litke this:
+There are some Linux distributions where in the /etc/ssh/sshd_config is missing the KexAlgorithms to describe which methods are supported by the SSH daemon. On those scenarios when trying to execute the runbook, the execution can fail presenting some message litke this:
 
 ```
 Exception calling "Connect" with "0" argument(s): "An established connection was aborted by the software in your host 
