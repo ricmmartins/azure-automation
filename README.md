@@ -166,7 +166,7 @@ At C:\Modules\User\SSH\SSH.psm1:69 char:5
     + FullyQualifiedErrorId : SshConnectionException
 ```
 
-You can check alson on the /var/log/messages of the VM some kind of mesage like this
+You can check also on the /var/log/messages of the VM some kind of mesage like this
 
 ```
 ssh_dispatch_run_fatal: Connection from XXX.XXX.XXX.XXX port XXX: DH GEX group out of range [preauth]
